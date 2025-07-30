@@ -35,7 +35,7 @@ function SideBar() {
           <NavLink to='/about'> <FaMedal />  About</NavLink> 
             </div>
               <div className="sidebar-link">
-          <NavLink to='/about'> <MdContactPage />  Contact Us</NavLink> 
+          <NavLink to='/contact'> <MdContactPage />  Contact Us</NavLink> 
             </div>
             </>   
          )}

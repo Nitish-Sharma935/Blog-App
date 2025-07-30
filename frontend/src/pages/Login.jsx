@@ -1,4 +1,3 @@
-// src/pages/LoginSignUp.jsx
 import React, { useState } from 'react';
 import './Css/Login.css';
 import { useNavigate } from 'react-router-dom';
@@ -60,7 +59,7 @@ function LoginSignUp() {
         alert(data.message || 'Login failed');
       }
     } catch (err) {
-      console.error(err);
+      console.log(err);
       alert('Something went wrong.');
     }
   };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import logo from '../assets/blog_logo.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { IoLogInOutline } from "react-icons/io5";
 import { TbLogout2 } from "react-icons/tb";
 import { IoSearch } from "react-icons/io5";
@@ -12,20 +12,21 @@ import { useUser } from '../../pages/UserContext';
 function Navbar() {
     
     const { user, logs, setLogs } = useUser();
+    const naviagte = useNavigate();
      
   return (
     <div className='navbar'>
         <div className="blog-logo">
-            <img src={logo} alt="Blog Logo" />
+            <img src={logo} alt="Blog Logo" onClick={()=> naviagte('/')  } />
             <p>Blogger</p>
         </div>
         <form className='search-container'>
-          <div className="search-bar">
+          {/* <div className="search-bar">
             
              <input type="text" placeholder='Search here...' />
              <button type='submit'  className="search-button"><IoSearch  className="search-icon"/></button>
             
-          </div>
+          </div> */}
         </form>
         <div className='navbar-links'>
           {localStorage.getItem('token') ?  <div className="nav-user-section">

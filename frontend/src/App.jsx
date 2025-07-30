@@ -19,6 +19,8 @@ import ShowDetailedBlogToAdmin from "../AdminPanel/ShowimgApprovedBlogs/ShowDeta
 import RequireAdmin from "../AdminPanel/RequireAdmin";
 import CommentsSection from "../AdminPanel/CommentsSectionFor Admin/CommentsSection";
 import Activity from "../AdminPanel/Activity/Activity";
+import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
 
 
 
@@ -30,13 +32,15 @@ function App() {
      <BrowserRouter>
       <Routes>
         <Route path='/' element={<MainLayout><Home/></MainLayout>}/>
+        <Route path='/about' element={<MainLayout><About/></MainLayout>}/>
+        <Route path='/contact' element={<MainLayout><ContactUs/></MainLayout>}/>
 
          <Route path='/blog/:id' element={<BlogDetail/>}/>
           <Route path='/profile' element={<MainLayout><Profile/></MainLayout>}/>
            <Route path='/my-comments' element={<MainLayout><UserComments/></MainLayout>}/>
           <Route path='/createblogs' element={<MainLayout><CreateBlogs/></MainLayout>}/>
            <Route path='/userpendingblogs' element={<MainLayout><UserPendingBlogs/></MainLayout>}/>
-         <Route path='/login' element={<AuthLayout><Login/></AuthLayout>}/>
+         <Route path='/login' element={<AuthLayout> <Login/> </AuthLayout>}/>
 
 
         <Route path='/admin' element={<RequireAdmin><AuthLayout><Admin/></AuthLayout></RequireAdmin>}/>
